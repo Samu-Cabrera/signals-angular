@@ -1,0 +1,32 @@
+<h2>
+    Usuario
+</h2>
+
+<hr>
+
+<div class="row">
+    <div class="col-4">
+        <h3>
+            Usuario actual
+        </h3>
+
+        <button 
+            (click)="loadUser(userId() - 1)"
+            class="btn btn-primary">
+            Anterior
+        </button>
+        &nbsp;
+        <button 
+            (click)="loadUser(userId() + 1)"
+            class="btn btn-primary">
+            Siguiente
+        </button>
+    </div>
+
+    <div class="col-8">
+        <h4>Usuario: {{ userId() }}</h4>
+        <p>Correo: {{ currentUser()?.email }}</p>
+        <p>Nombre: {{ currentUser()?.first_name }}</p>
+    </div>
+
+</div>
